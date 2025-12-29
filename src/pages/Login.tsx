@@ -23,7 +23,11 @@ export default function Login() {
 
       if (data.success && data.userId && data.token) {
         login(data.userId, data.token);
-        navigate('/');
+        // Store username for dashboard display
+        if (data.user?.name) {
+          localStorage.setItem('username', data.user.name);
+        }
+        navigate('/customer/dashboard');
       } else {
         setError(data.message || 'Invalid credentials');
       }

@@ -53,6 +53,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     }
     localStorage.removeItem('token');
     localStorage.removeItem('userId');
+    localStorage.removeItem('username');
     setUserId(null);
     setIsLoggedIn(false);
     window.location.href = '/login';
