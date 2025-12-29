@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
+import { Link } from 'react-router-dom';
 import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
 import 'leaflet.markercluster/dist/MarkerCluster.css';
@@ -357,12 +358,12 @@ export default function LeafletMap() {
             <div className="flex h-full items-center justify-center cursor-pointer px-4 py-2 text-white hover:bg-blue-700 transition">
               Dropdown 2
             </div>
-            <div className="flex h-full items-center justify-center cursor-pointer px-4 py-2 text-white hover:bg-blue-700 transition">
+            <Link to="/login" className="flex h-full items-center justify-center cursor-pointer px-4 py-2 text-white hover:bg-blue-700 transition">
               Login
-            </div>
-            <div className="flex h-full items-center justify-center cursor-pointer px-4 py-2 text-white hover:bg-blue-700 transition">
+            </Link>
+            <Link to="/register" className="flex h-full items-center justify-center cursor-pointer px-4 py-2 text-white hover:bg-blue-700 transition">
               Join the member
-            </div>
+            </Link>
           </div>
         </div>
       </div>
